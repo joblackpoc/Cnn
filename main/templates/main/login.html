@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+  
+  {% block content %}
+      <!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+	<div class="pcoded-content">
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10"> Cockpit 11</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#!">ระบบ Login</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+		<!-- [ Main Content ] start -->
+		<div class="row">
+			<!-- [ accordion-collapse ] start -->
+			<div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"> กรอกข้อมูล Username & Password</h5>
+                        <hr>                        
+
+                        <div class="content-section">
+                            <form method='POST'>
+                              {% csrf_token %}
+                              <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">ลงชื่อเข้าสู่ระบบ</legend>
+                                
+                                  {{ form|crispy }}
+                                
+                              </fieldset>
+                              <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">เข้าสู่ระบบ</button>
+                                <h5 class="text-muted ml-2">
+                                  <a href="{% url 'password_reset' %}">คุณลืม Password?</a>
+                                </h5>
+                              </div>
+                            </form>
+                            <div class="border-top pt-3">
+                              <small class="text-muted">
+                                ต้องการใช้งานระบบ ? <a class="ml-2" href="{% url 'register' %}">สมัครเข้าใช้งานระบบ</a>
+                              </small>
+                            </div>
+                          </div>
+
+                    </div>
+                </div>
+			</div>
+			<!-- [ accordion-collapse ] end -->
+		</div>
+		<!-- [ Main Content ] end -->
+	</div>
+</div>
+<!-- [ Main Content ] end -->
+  {% endblock content %}
+      

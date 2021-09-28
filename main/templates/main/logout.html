@@ -1,0 +1,51 @@
+
+{% extends 'main/base.html' %}
+
+{% block content %}
+          <!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+	<div class="pcoded-content">
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Chumphon New Normal</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#!">Login & Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+		<!-- [ Main Content ] start -->
+		<div class="row">
+			<!-- [ accordion-collapse ] start -->
+			<div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"> ออกจากระบบ</h5>
+                        <hr>                        
+
+                        <h2>คุณออกจากระบบ Cockpit 11 แล้ว</h2>
+                        <div class="border-top pt-3">
+                          <small class="text-muted">
+                            <a href="{% url 'login' %}">ลงชื่อเข้าใช้งานอีกครั้ง ?</a>
+                          </small>
+                        </div>
+
+                    </div>
+                </div>
+			</div>
+			<!-- [ accordion-collapse ] end -->
+		</div>
+		<!-- [ Main Content ] end -->
+	</div>
+</div>
+<!-- [ Main Content ] end -->
+{% endblock content %}
+    

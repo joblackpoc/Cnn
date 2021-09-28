@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+	<div class="pcoded-content">
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Profile</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">HOME</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+		<!-- [ Main Content ] start -->
+		<div class="row">
+			<!-- [ accordion-collapse ] start -->
+			<div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"> กรุณากรอกข้อมูลให้ครบถ้วน </h5>
+                        <hr>                        
+
+						<div class="content-section">
+							<div class="media">
+							  <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" width="300">
+							  <div class="media-body">
+								<h2 class="account-heading">{{ user.username }}</h2>
+								<p class="text-secondary">{{ user.email }}</p>
+							  </div>
+							</div>
+							<form method='POST' enctype='multipart/form-data'>
+							  {% csrf_token %}
+							  <fieldset class="form-group">
+								<legend class="border-bottom mb-4">Profile Info</legend>
+								{{ u_form|crispy }}
+								{{ p_form|crispy }}
+							  </fieldset>
+							  <div class="form-group">
+								<button class="btn btn-outline-info" type="submit">Update</button>
+							  </div>
+							</form>
+						  </div>
+
+                    </div>
+                </div>
+			</div>
+			<!-- [ accordion-collapse ] end -->
+		</div>
+		<!-- [ Main Content ] end -->
+	</div>
+</div>
+<!-- [ Main Content ] end -->
+{% endblock content %}
