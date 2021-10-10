@@ -18,11 +18,12 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from main import views as user_views
+from main import urls, views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')),
+    path('',include('savechumphon.urls')),
+    path('main/', include('main.urls')),
     path('person/',include('person.urls')),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
