@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'CNN.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':  'savechumphon',
-        'HOST': '61.19.80.157',
-        'PORT': '3306',
-        'USER': 'admin',
-        'PASSWORD': 'P@ssw0rdhdc++',
+        'NAME':  '00000000',
+        'HOST': '0000000,
+        'PORT': '00000',
+        'USER': '000000',
+        'PASSWORD': '0000000',
     }
 }
 
@@ -141,8 +141,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'djangonatthawut@gmail.com' # os.environ.get('EMAIL_USER')
-EMAIL_HOST_PASSWORD = 'salamhshgopdlujb' # os.environ.get('EMAIL_PASS')
+EMAIL_HOST_USER = 'ssssssssss' # os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = 'ssssssss' # os.environ.get('EMAIL_PASS')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
